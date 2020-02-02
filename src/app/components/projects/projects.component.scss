@@ -1,0 +1,87 @@
+.underModal{
+  position: absolute;
+  top:50%;
+}
+.single-project{
+  position: fixed;
+  top:0;
+  right:0 !important;
+  width: 100%;
+  height:100vh;
+  z-index: 15;
+}
+.o{
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+
+}
+.c{
+  transform: translateX(0%);
+  transition: transform 0.5s ease;
+}
+.backbtn{
+  position: absolute;
+  top:10px;
+  left:10px;
+  outline: none !important;
+}
+.skills{
+  background: none;
+  border:none;
+  background:#069488;
+  color:#fff;
+  padding: 5px 0;
+  width:100px;
+  border-radius: 20px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.active{
+  background:#fff;
+  color:#069488;
+}
+
+.project{
+  width:100%;
+  height:170px;
+  position: relative;
+  background: #ffff;
+  border-radius: 6px;
+}
+.details-btn{
+  border:none;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  padding: 10px 0;
+  color:#fff;
+  background:#069488;
+  border-radius: 0 0 6px 6px;
+  transition: 0.4s ease;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+.details-btn:hover{
+  color:#fff;
+  background:#056e66;
+}
+.pj-title,.pj-details,.bookmar-icon{
+  pointer-events: none;
+}
+.bookmar-icon{
+  position: absolute;
+  top:-4px;
+  right:10px;
+  font-size: 33px;
+  color:#069488;
+}
+@media only screen and (max-width: 600px){
+  .root{
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+}
+

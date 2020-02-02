@@ -1,0 +1,23 @@
+.eduDiv{
+  .logo{
+    margin-right: 20px;
+    img{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+  }
+  .details{
+    p{
+      padding: 0;
+      margin:0;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .root{
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+}
