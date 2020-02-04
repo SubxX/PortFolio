@@ -15,27 +15,41 @@
     <div class="container">
 
       <div class="row mt-3">
-
-        <div class="col-xl-4 col-md-4 col-lg-6 mb-4">
-          <div class="project p-2 pl-4 pt-3">
-            <p class="mb-2 font-weight-bold pj-title">Portfolio Website</p>
-            <p class="pj-details">This is my portfolio website (SPA),designed with Figma & developed with Angular 7
-            </p>
-            <button class="details-btn" (click)="open()">DETAILS</button>
-            <mat-icon class="bookmar-icon">bookmark</mat-icon>
+        <ng-container *ngFor="let project of projects">
+          <div class="col-xl-4 col-md-4 col-lg-6 mb-4">
+            <div class="project p-2 pl-4 pt-3">
+              <p class="mb-2 font-weight-bold pj-title">{{project.title}}</p>
+              <p class="pj-details">{{project.description}} </p>
+              <button class="details-btn" (click)="showaProject(project)" data-toggle="modal"
+                data-target="#exampleModalCenter">DETAILS</button>
+              <mat-icon class="bookmar-icon">bookmark</mat-icon>
+            </div>
           </div>
-        </div>
-
+        </ng-container>
       </div>
     </div>
-
+    <p class="text-light text-center udAni">Under Development . . .</p>
   </div>
 
-  <div class="single-project" [ngClass]="{'c': openModal, 'o':!openModal}">
-    <button mat-mini-fab color="warn" class="backbtn" (click)="open()">
-      <mat-icon>arrow_forward</mat-icon>
-    </button>
-    <app-singleproject></app-singleproject>
-  </div>
 
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">{{singlepj.title}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{singlepj.description}}</p>
+        <a [href]="singlepj.github" target="_blank" class="btn btn btn-outline-dark">Github<i class="fa fa-github ml-2"
+            aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
 </div>

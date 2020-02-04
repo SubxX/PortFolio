@@ -39,6 +39,7 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
   ]
 })
 export class AppComponent implements OnInit {
+  hideAlert = false;
   title = 'portfolio';
   activatedRoute = '';
   currentRouteAddress;
@@ -52,7 +53,16 @@ export class AppComponent implements OnInit {
 
   }
   ngOnInit() {
-    this.changeRoute('projects', 'projects');
+    this.changeRoute('about me', 'home');
+    this.showHideAlert();
+  }
+  showHideAlert() {
+    setTimeout(() => {
+      this.hideAlert = true;
+      setTimeout(() => {
+        this.hideAlert = false;
+      }, 8000);
+    }, 1000);
   }
   changeRoute(click, route) {
     this.activatedRoute = click;

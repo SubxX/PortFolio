@@ -1,29 +1,6 @@
-.underModal{
-  position: absolute;
-  top:50%;
-}
-.single-project{
-  position: fixed;
-  top:0;
-  right:0 !important;
-  width: 100%;
-  height:100vh;
-  z-index: 15;
-}
-.o{
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
-
-}
-.c{
-  transform: translateX(0%);
-  transition: transform 0.5s ease;
-}
-.backbtn{
-  position: absolute;
-  top:10px;
-  left:10px;
-  outline: none !important;
+.udAni{
+  animation: udAni 4s infinite;
+  opacity: 0;
 }
 .skills{
   background: none;
@@ -77,6 +54,17 @@
   right:10px;
   font-size: 33px;
   color:#069488;
+}
+@keyframes udAni{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }
 @media only screen and (max-width: 600px){
   .root{

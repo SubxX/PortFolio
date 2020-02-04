@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  openModal = false;
   search = {
     angular: false,
     react: false,
@@ -15,15 +14,31 @@ export class ProjectsComponent implements OnInit {
     others: false,
     uiux: false
   };
-  constructor() { }
-
-  ngOnInit() {
+  singlepj = {
+    title: '',
+    description: '',
+    github: ''
   }
-  open() {
-    this.openModal = !this.openModal;
+  constructor() { }
+  projects = [
+    {
+      title: 'Portfolio Website',
+      description: 'This is my portfolio website (SPA),designed with Figma & developed with Angular 7',
+      github: 'https://github.com/SubxX/PortFolio'
+    },
+    {
+      title: 'WebChat Application',
+      description: 'This is my college Project where Angular is used for FrontEnd and Nodejs is used for backend',
+      github: 'https://github.com/SubxX/ChatApplication'
+    }
+  ]
+  ngOnInit() {
   }
   changeSearch(item) {
     this.search[item] = !this.search[item];
     console.log(this.search);
+  }
+  showaProject(item) {
+    this.singlepj = item;
   }
 }

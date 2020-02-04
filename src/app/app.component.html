@@ -25,3 +25,8 @@
 <div class="router-container" [@routeAnimation]="getDepth(myOutlet)" (click)="showTopOutside()">
   <router-outlet #myOutlet="outlet"></router-outlet>
 </div>
+
+<div class="message text-center text-light" [ngClass]="{'shown': hideAlert}">
+  <p>This site is still under development it is Opensource as well if you find a bug feel free to report here</p>
+  <a href="https://github.com/SubxX/PortFolio" target="_blank">Github</a>
+</div>

@@ -8,23 +8,23 @@ import { Component, OnInit } from '@angular/core';
 export class AboutSkillsComponent implements OnInit {
   skills = [
     {
+      type: 'Frontend', languages: [
+        'HTML', 'CSS', 'SCSS', 'JavaScript', 'React Js', 'Angular'
+      ]
+    },
+    {
       type: 'Backend', languages: [
         'Node JS', 'Express Js'
       ]
     },
     {
       type: 'DataBase & ORM', languages: [
-        'Mongo DB', 'Mongoose', 'SQL'
+        'Mongo DB', 'Mongoose'
       ]
     },
     {
       type: 'Language', languages: [
         'JavaScript', 'TypeScript'
-      ]
-    },
-    {
-      type: 'Frontend', languages: [
-        'HTML', 'CSS', 'SCSS', 'JavaScript', 'React Js', 'Angular'
       ]
     },
     {
