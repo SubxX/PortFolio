@@ -43,10 +43,11 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
   activatedRoute = '';
   currentRouteAddress;
+  openSocialBtn = false;
   RouteAr = [
-    { icn: 'fa fa-user-circle', click: 'about me', route: 'home' },
-    { icn: 'fa fa-envelope-o', click: 'skills', route: 'about' },
-    { icn: 'fa fa-briefcase', click: 'projects', route: 'projects' }
+    { icn: 'fa fa-user-circle fa-routing', click: 'about me', route: 'home' },
+    { icn: 'fa fa-envelope-o fa-routing', click: 'skills', route: 'about' },
+    { icn: 'fa fa-briefcase fa-routing', click: 'projects', route: 'projects' }
   ];
   showmTop = false;
   constructor(private router: Router) {
@@ -55,6 +56,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.changeRoute('about me', 'home');
     this.showHideAlert();
+  }
+  openSocialBtnContainer() {
+    this.openSocialBtn = !this.openSocialBtn;
   }
   showHideAlert() {
     setTimeout(() => {
@@ -65,9 +69,10 @@ export class AppComponent implements OnInit {
     }, 1000);
   }
   changeRoute(click, route) {
-    this.activatedRoute = click;
-    this.currentRouteAddress = route;
-    this.router.navigate([`/${route}`]);
+    this.router.navigate([`/${route}`]).then(() => {
+      this.activatedRoute = click;
+      this.currentRouteAddress = route;
+    });
   }
   getDepth(outlet) {
     return outlet.activatedRouteData.depth;

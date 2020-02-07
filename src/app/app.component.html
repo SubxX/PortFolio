@@ -1,5 +1,5 @@
-<button mat-mini-fab class="menuBtn" (click)="showTop()">
-  <mat-icon>{{showmTop?'close' :'menu'}}</mat-icon>
+<button mat-mini-fab class="menuBtn" [ngClass]="{'shownBtn': showmTop}" (click)="showTop()">
+  <mat-icon>{{showmTop?'arrow_upward' :'menu'}}</mat-icon>
 </button>
 
 <div class=" container text-light m-auto text-center m-top pb-2" [ngClass]="{'show': showmTop }">
@@ -13,6 +13,14 @@
     <i class={{rt.icn}} (click)="changeRoute(rt.click,rt.route)" matTooltip={{rt.click.toUpperCase()}}
       matTooltipPosition="below" [ngClass]="{'active':currentRouteAddress==rt.route}"></i>
   </ng-container>
+</div>
+<div class="sideSocialBar text-center" [ngClass]="{'showSocialBtn': openSocialBtn}">
+  <button class="open-socialbtn text-center" (click)="openSocialBtnContainer()">
+    <mat-icon class="ml-2">{{openSocialBtn ? 'arrow_forward_ios' : 'arrow_back_ios'}}</mat-icon>
+  </button>
+  <i class="fa fa-facebook-square fa-social"></i>
+  <i class="fa fa-github fa-social"></i>
+  <i class="fa fa-envelope fa-social"></i>
 </div>
 
 <div class="active-route-name">
