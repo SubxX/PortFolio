@@ -45,16 +45,16 @@ export class AppComponent implements OnInit {
   currentRouteAddress;
   openSocialBtn = false;
   RouteAr = [
-    { icn: 'fa fa-user-circle fa-routing', click: 'about me', route: 'home' },
-    { icn: 'fa fa-cogs fa-routing', click: 'skills', route: 'about' },
-    { icn: 'fa fa-sticky-note fa-routing', click: 'projects', route: 'projects' }
+    { icn: 'fas fa-user-circle fa-routing', click: 'about me', route: 'home' },
+    { icn: 'fas fa-cogs fa-routing', click: 'skills', route: 'about' },
+    { icn: 'fas fa-sticky-note fa-routing', click: 'projects', route: 'projects' }
   ];
   showmTop = false;
   socials = [
-    { icn: 'fa fa-facebook-square fa-social', link: 'https://www.facebook.com/subham.bhattacharya.subX' },
-    { icn: 'fa fa-github fa-social', link: 'https://github.com/SubxX' },
-    { icn: 'fa fa-linkedin-square fa-social', link: 'https://www.linkedin.com/in/subham-bhattacharya-b66b49145/' },
-  ]
+    { icn: 'fab fa-facebook-square fa-social', link: 'https://www.facebook.com/subham.bhattacharya.subX' },
+    { icn: 'fab fa-github fa-social', link: 'https://github.com/SubxX' },
+    { icn: 'fab fa-linkedin fa-social', link: 'https://www.linkedin.com/in/subham-bhattacharya-b66b49145/' },
+  ];
 
   constructor(private router: Router) {
 
@@ -71,7 +71,7 @@ export class AppComponent implements OnInit {
       this.hideAlert = true;
       setTimeout(() => {
         this.hideAlert = false;
-      }, 8000);
+      }, 5000);
     }, 1000);
   }
   changeRoute(click, route) {
@@ -88,9 +88,8 @@ export class AppComponent implements OnInit {
     this.showmTop = !this.showmTop;
   }
   showTopOutside() {
-    if (this.showmTop) {
+    if (this.showmTop || this.openSocialBtn) {
       this.showmTop = false;
-    } else if (this.openSocialBtn) {
       this.openSocialBtn = false;
     } else {
       return;

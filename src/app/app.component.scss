@@ -1,17 +1,17 @@
-a{
-  color:#fff !important;
+a {
+  color: #fff !important;
   text-decoration: none !important;
 }
-.notiAnchor{
-  color:#0275d8 !important;
+.notiAnchor {
+  color: #0275d8 !important;
 }
-.notiAnchor:hover{
+.notiAnchor:hover {
   text-decoration: underline !important;
 }
-.message{
-  width:100%;
+.message {
+  width: 100%;
   position: fixed;
-  left:0;
+  left: 0;
   bottom: 0;
   background-color: black;
   padding: 20px;
@@ -19,55 +19,63 @@ a{
   transition: transform 0.6s ease;
   transform: translateY(100%);
 }
-.shown{
+.shown {
   transform: translateY(0);
 }
-.profile{
-  width:140px;
-  height:140px;
-  border-radius: 50%;
-  border:3px solid #fff;
+.profile-Pic {
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  margin: auto;
   padding: 5px;
 }
-.m-top{
-  p{
-    margin:0;
+.profile {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.m-top {
+  p {
+    margin: 0;
     margin-bottom: 7px;
     padding: 0;
   }
 }
-.fa-routing{
-	margin:5px 35px;
-	font-size: 25px;
-	cursor: pointer;
+.fa-routing {
+  margin: 5px 35px;
+  font-size: 25px;
+  cursor: pointer;
   transition: 0.4s ease;
   outline: none;
   padding-bottom: 10px;
   border-bottom: 2px solid transparent;
 }
-.active{
-	color:#069488 !important;
-  transform:translateY(-5px);
-  border-color:#069488;
+.active {
+  color: #069488 !important;
+  transform: translateY(-5px);
+  border-color: #069488;
 }
-.fa:hover{
-  color:#069488 !important;
-	color:rgba(255, 255, 255, 0.52);
-	transform:translateY(-5px);
+.fa:hover {
+  color: #069488 !important;
+  color: rgba(255, 255, 255, 0.52);
+  transform: translateY(-5px);
 }
-.activated-route{
-	letter-spacing: 0.4rem;
-	margin-bottom: 10px;
+.activated-route {
+  letter-spacing: 0.4rem;
+  margin-bottom: 10px;
 }
-.route-btmBar{
-	width:20%;
-	height:3px;
-	background: #069488;
-	margin:auto;
-	margin-top: 10px;
-	position: relative;
+.route-btmBar {
+  width: 20%;
+  height: 3px;
+  background: #069488;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
 }
-.router-container{
+.router-container {
   overflow-x: hidden;
   position: relative !important;
 }
@@ -76,101 +84,101 @@ a{
   width: 0px;
   background: transparent;
 }
-.menuBtn{
+.menuBtn {
   position: fixed;
-  top:6px;
-  left:7px;
+  top: 6px;
+  left: 7px;
   z-index: 12;
   display: none;
-  transition:0.5s ease;
+  transition: 0.5s ease;
   transition-delay: 0.1s;
 }
-.shownBtn{
-  top:195px;
+.shownBtn {
+  top: 195px;
 }
-.sideSocialBar{
+.sideSocialBar {
   z-index: 1;
-  position:fixed;
-  color:#fff;
-  top:35%;
-  right:0%;
+  position: fixed;
+  color: #fff;
+  top: 35%;
+  right: 0%;
   background: #333;
   padding: 3px 10px;
-  border-radius:20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
   transform: translateX(110%);
   transition: transform 0.5s ease-in-out;
 }
-.socailbtnicn{
-  margin-top:5px !important;
+.socailbtnicn {
+  margin-top: 5px !important;
   transition: 0.5s ease;
 }
-.socailbtnicnRotate{
+.socailbtnicnRotate {
   transform: rotate(-180deg) !important;
   margin-right: 20px !important;
 }
-.showSocialBtn{
+.showSocialBtn {
   transform: translateX(0%);
 }
-.open-socialbtn{
-  border:none;
+.open-socialbtn {
+  border: none;
   position: absolute;
   right: 34px;
-  top:35%;
+  top: 35%;
   background: #333;
   padding: 5px 7px !important;
-  color:#fff;
+  color: #fff;
   border-radius: 10px 0 0 10px;
-  outline:none;
+  outline: none;
 }
-.fa-social{
+.fa-social {
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:20px 0;
+  margin: 20px 0;
   font-size: 25px;
   transition: 0.2s ease-in-out;
 }
-.fa-envelope{
+.fa-envelope {
   font-size: 22px;
 }
-.fa-social:hover{
-  color:rgb(189, 189, 189);
+.fa-social:hover {
+  color: rgb(189, 189, 189);
 }
 @media only screen and (max-width: 600px) {
-  .menuBtn{
+  .menuBtn {
     display: block;
-    outline:none;
+    outline: none;
   }
-  .message{
+  .message {
     bottom: 53px;
   }
   .m-top {
     position: fixed;
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    background-color:#069488;/*1A1D22*/
+    transition: transform 0.3s ease-in-out;
+    background-color: #069488;
     z-index: 11;
     border-radius: 0 0 5px 5px;
   }
-  .show{
+  .show {
     transform: translateY(0%);
   }
-  .m-middle{
+  .m-middle {
     position: fixed;
     bottom: 0;
-    left:0;
+    left: 0;
     background-color: rgb(0, 0, 0);
     z-index: 1;
     padding-top: 7px;
-    border-radius: 5px  5px 0 0;
+    border-radius: 5px 5px 0 0;
   }
-  .active-route-name{
+  .active-route-name {
     transform: translateY(-15px);
     background: rgb(0, 0, 0);
     padding-top: 1px;
     position: fixed;
-    width:100%;
+    width: 100%;
     z-index: 1;
   }
 }
