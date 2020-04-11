@@ -39,7 +39,6 @@ import { trigger, transition, group, query, style, animate } from '@angular/anim
   ]
 })
 export class AppComponent implements OnInit {
-  hideAlert = false;
   title = 'portfolio';
   activatedRoute = '';
   currentRouteAddress;
@@ -61,18 +60,9 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.changeRoute('about me', 'home');
-    this.showHideAlert();
   }
   openSocialBtnContainer() {
     this.openSocialBtn = !this.openSocialBtn;
-  }
-  showHideAlert() {
-    setTimeout(() => {
-      this.hideAlert = true;
-      setTimeout(() => {
-        this.hideAlert = false;
-      }, 5000);
-    }, 1000);
   }
   changeRoute(click, route) {
     this.router.navigate([`/${route}`]).then(() => {

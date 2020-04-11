@@ -1,14 +1,15 @@
-*{
-  box-sizing: border-box  !important;
+@import "./app/shared/theme.scss";
+* {
+  box-sizing: border-box !important;
 }
-body{
-  background-color:#1A1D22;
+body {
+  background-color:$body-background;
   overflow-x: hidden;
 }
-.btmBar{
-  height:3px;
-  width:10%;
-	background: #069488;
+.btmBar {
+  height: 3px;
+  width: 10%;
+  background: $dark-primary;
   margin-top: 10px;
 }
 /*

@@ -1,75 +1,71 @@
-.udAni{
-  animation: udAni 4s infinite;
-  opacity: 0;
-}
-.skills{
-  background: none;
-  border:none;
-  background:#069488;
-  color:#fff;
-  padding: 5px 0;
-  width:100px;
-  border-radius: 20px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s;
-}
-.active{
-  background:#fff;
-  color:#069488;
+@import "../../shared/theme.scss";
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
 }
 
-.project{
-  width:100%;
-  height:170px;
-  position: relative;
-  background: #ffff;
-  border-radius: 6px;
-}
-.details-btn{
-  border:none;
-  position: absolute;
-  bottom: 0;
-  left:0;
+.project {
   width: 100%;
-  padding: 10px 0;
-  color:#fff;
-  background:#069488;
+  height: 100%;
+  position: relative;
+  background: var(--white);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  .text-content {
+    padding: 15px;
+    p {
+      margin: 0;
+    }
+  }
+}
+.details-btn {
+  display: block;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  max-height: 50px;
+  min-height: 50px;
+  color: $dark-white !important;
+  background: $dark-primary;
   border-radius: 0 0 6px 6px;
   transition: 0.4s ease;
   letter-spacing: 0.1rem;
   font-weight: 500;
+  outline: none;
+  align-self: end;
+  text-decoration: none;
 }
-.details-btn:hover{
-  color:#fff;
-  background:#056e66;
+.details-btn:hover {
+  color: $dark-white;
+  background: $dark-primary-hover;
 }
-.pj-title,.pj-details,.bookmar-icon{
-  pointer-events: none;
-}
-.bookmar-icon{
+.bookmar-icon {
   position: absolute;
-  top:-4px;
-  right:10px;
-  font-size: 33px;
-  color:#069488;
+  top: 0;
+  right: 10px;
+  font-size: 30px;
+  color: $dark-primary;
 }
-@keyframes udAni{
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-@media only screen and (max-width: 600px){
-  .root{
-    padding-top: 50px;
-    padding-bottom: 55px;
-  }
+.fa-github {
+  font-size: 25px;
 }
 
+@media (max-width: 1000px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .root {
+    padding-bottom: 65px;
+    padding-top: 50px;
+  }
+}

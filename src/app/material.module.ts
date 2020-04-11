@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 import {
   MatTooltipModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDialogModule
 } from '@angular/material';
 
 const materials = [
   MatTooltipModule,
   MatIconModule,
-  MatButtonModule
-]
+  MatButtonModule,
+  MatDialogModule
+];
 
 
 @NgModule({

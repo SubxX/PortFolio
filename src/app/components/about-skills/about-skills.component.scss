@@ -1,38 +1,62 @@
-.skill-tab{
-  .type{
-    p{
+@import "../../shared/theme.scss";
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.inner-skill {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: hsl(218, 13%, 15%);
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background: $dark-primary;
+  }
+  .type {
+    p {
       font-size: 16px;
       letter-spacing: 0.1rem;
       font-weight: 500;
     }
   }
 }
-.inner-skill{
-  border-radius: 7px;
-  background: hsl(218, 13%, 15%);
-}
-.languages{
-  color:#333;
 
-  .language{
+.languages {
+  color: #333;
+  .language {
     cursor: pointer;
     border-radius: 7px;
     padding: 3px;
     position: relative;
-    p{
-      margin:0;
+    p {
+      margin: 0;
       padding: 0;
     }
-    .lg-name{
+    .lg-name {
       font-weight: 400;
-      color:white;
+      color: white;
     }
   }
 }
 
-@media only screen and (max-width: 600px){
-  .about-root{
-    padding-bottom: 55px;
+@media (max-width: 1000px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-root {
+    padding-bottom: 65px;
     padding-top: 50px;
   }
 }

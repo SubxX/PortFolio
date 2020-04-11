@@ -9,7 +9,7 @@ export class AboutSkillsComponent implements OnInit {
   skills = [
     {
       type: 'Frontend', languages: [
-        'HTML', 'CSS', 'SCSS', 'JavaScript', 'React Js', 'Angular'
+        'HTML', 'CSS', 'SASS', 'JavaScript', 'React Js', 'Angular'
       ]
     },
     {
